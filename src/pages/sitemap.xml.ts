@@ -15,6 +15,7 @@ const staticPaths = [
   "/gallery/",
   "/locations/",
   "/memberships/",
+  "/privacy-policy/",
   "/services/",
   "/treatments/",
 ];
