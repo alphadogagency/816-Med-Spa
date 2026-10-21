@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Marketing website for **816 Med Spa** (aesthetic med spa, Kansas City). Static-rendered Astro site deployed to Cloudflare Workers. Requires Node >= 22.12.0.
+Marketing website for **816 Med Spa** (aesthetic med spa, Kansas City). Static Astro site deployed to Cloudflare Pages. Requires Node >= 22.12.0.
 
 ## Commands
 
@@ -13,16 +13,16 @@ npm run dev              # dev server at localhost:4321
 npm run build            # production build to ./dist/
 npm run preview          # preview the build locally
 npm run astro check      # type-check .astro files (uses @astrojs/check)
-npm run generate-types   # regenerate Cloudflare binding types via wrangler
+npm run deploy          # build and publish main to the existing Cloudflare Pages project
 ```
 
 There is no test suite or linter configured. `astro check` is the closest thing to a verification step.
 
-Deployment is automatic: pushing to `main` triggers a Cloudflare build (note the `trigger cloudflare build` commit pattern — empty commits are sometimes used to force a redeploy).
+The repository moved to `alphadogagency/816-Med-Spa`, but Cloudflare's old Git connection no longer triggers builds. After committing and pushing an authorized production update to `main`, run `npm run deploy` and verify the changed live URL. This uses the existing Wrangler login; no credentials belong in the repository. See `docs/deployment.md`.
 
 ## Architecture
 
-- **Astro 6 + Tailwind CSS v4 + MDX**, adapter is `@astrojs/cloudflare` (SSR-capable, but the site is effectively static marketing pages).
+- **Astro 6 + Tailwind CSS v4 + MDX**, built as static marketing pages in `dist` and uploaded to Cloudflare Pages.
 - **Pages** are file-based routes in `src/pages/` (`index.astro`, `contact-us.astro`, `about-us/meet-the-doctor.astro`).
 - **`BaseLayout.astro`** wraps every page: sets all SEO/OG/Twitter meta from `title`/`description`/`canonical` props, loads Google Fonts, imports global CSS, and contains the global **scroll-reveal** IntersectionObserver script.
 - **Page composition pattern**: a page imports `SiteHeader`, a series of `*Section.astro` components, `SiteFooter`, and `QuizTab`, then arranges them inside `BaseLayout`. Each section is self-contained — its content data (e.g. the services/conditions array, testimonials) is defined as a local const in the component's frontmatter, not fetched or centralized.

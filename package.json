@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "deploy": "npm run build && node scripts/deploy-cloudflare.mjs",
     "build:sites": "astro build && node scripts/prepare-sites.mjs",
     "qa:locations": "node scripts/qa-location-pages.mjs",
     "preview": "astro preview",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "4.151.3"
   }
 }

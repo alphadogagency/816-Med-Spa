@@ -1,4 +1,11 @@
-# Astro Starter Kit: Minimal
+# 816 Med Spa
+
+Astro marketing website hosted on Cloudflare Pages. After committing and pushing
+production changes to `main`, run `npm run deploy` to publish them. Git push alone
+currently does not deploy because the repository moved to the agency's GitHub
+organization. See [deployment instructions](docs/deployment.md).
+
+## Astro project reference
 
 ```sh
 npm create astro@latest -- --template minimal
