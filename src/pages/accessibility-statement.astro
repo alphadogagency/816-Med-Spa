@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+---
+
+<BaseLayout
+  title="Accessibility Statement | 816 Med Spa Kansas City"
+  description="Read 816 Aesthetic Med Spa's accessibility statement and learn how to contact us for help using our website or accessing its content."
+  canonical="https://www.816medspa.com/accessibility-statement/"
+>
+  <SiteHeader />
+  <main>
+    <section class="bg-espresso px-6 pt-44 pb-16 text-center text-parchment sm:pb-20 lg:pt-72">
+      <h1 class="mx-auto max-w-6xl text-5xl leading-tight sm:text-7xl lg:text-8xl">Accessibility Statement</h1>
+    </section>
+
+    <article class="accessibility-statement mx-auto max-w-4xl px-6 py-14 text-ink sm:px-8 sm:py-20" aria-label="Accessibility statement">
+      <h2 class="mb-7 text-4xl leading-tight sm:text-5xl">ADA Compliance Disclaimer</h2>
+      <p>We strive to maintain a website that is as technologically accessible and consistent with the Web Content Accessibility Guidelines (WCAG) 2.0 (the “Guidelines”) as possible. We aim to adhere to the Guidelines as updated and/or as otherwise amended from time to time.</p>
+      <p>We recognize that usability may not function perfectly in every area of the website. We have conducted and continue to conduct ongoing accessibility reviews of our website and remediation of any functionality issues. Please be aware that our efforts are ongoing.</p>
+      <p>If, at any time, you have difficulty using this website, or with a particular web page or function on this site, please contact us by phone <a href="tel:8165512322">(816) 551-2322</a> or visit our <a href="/contact-us/">Contact Us</a> page and we will make efforts to assist you.</p>
+      <p>If you have found an inaccessible area on the site, please be sure to specify the Web page and provide us with any other information you may think will help us locate the area. We will strive to make that page accessible, and if a page cannot be made accessible we will work to make a text version available. If you have a need for a specific electronic format, please <a href="/contact-us/">Contact Us</a>. Please provide the format that you require the content to be in, the web page address of the material, and your contact information.</p>
+      <p>We welcome your questions about this accessibility statement and comments on how to improve the website’s accessibility.</p>
+    </article>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .accessibility-statement {
+    font-size: 1rem;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+  }
+
+  .accessibility-statement p + p {
+    margin-top: 1.5rem;
+  }
+
+  .accessibility-statement a {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .accessibility-statement a:hover {
+    color: var(--color-gold);
+  }
+
+  .accessibility-statement a:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+  }
+</style>

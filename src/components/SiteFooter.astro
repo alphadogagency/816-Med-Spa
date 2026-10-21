@@ -68,12 +68,18 @@ const links = [
         </a>
       </div>
     </div>
-    <div class="mt-8 flex flex-col items-center justify-center gap-3 border-t border-sage/15 pt-6 text-center text-sm text-gray-600 sm:flex-row sm:gap-6">
+    <div class="mt-8 flex flex-col items-center justify-center gap-3 border-t border-sage/15 pt-6 text-center text-sm text-gray-600 sm:flex-row sm:flex-wrap sm:gap-6">
       <p>&copy; {year} 816 Aesthetic Med Spa. All rights reserved.</p>
-      <a
-        href="/privacy-policy/"
-        class="underline underline-offset-4 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
-      >Privacy Policy</a>
+      <nav aria-label="Legal" class="flex flex-wrap justify-center gap-x-6 gap-y-3">
+        <a
+          href="/privacy-policy/"
+          class="underline underline-offset-4 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
+        >Privacy Policy</a>
+        <a
+          href="/accessibility-statement/"
+          class="underline underline-offset-4 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
+        >Accessibility Statement</a>
+      </nav>
     </div>
   </div>
 </footer>
