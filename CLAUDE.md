@@ -48,9 +48,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   At 390px, an existing offscreen reveal/backplate creates 399px document width;
   the coordinator reproduced the same result on the pre-edit live page. Allee's
   settled content fits. Leave this unrelated existing behavior unchanged.
-- Status: verified locally and ready for authorized commit/push/direct deployment;
-  final live browser review belongs to the coordinator. No Calendar or external
-  messages sent.
+- Publication: website commit `5626e4f` pushed to `main`; `npm run deploy`
+  successfully published Cloudflare Pages deployment `8f6f46bc` at
+  `https://8f6f46bc.816-med-spa.pages.dev` on November 17, 2026.
+- Live HTTP verification passed at the production team URL: all three bio
+  paragraphs, Licensed Esthetician title, factual image alt, other staff present,
+  no Hailey staff entry, and exact optimized portrait bytes.
+- Coordinator's final live IAB check passed: Sydney, Allee, Jessica and Ashley
+  headings present; Hailey absent; portrait loaded at 960×1200; all three Allee bio
+  paragraphs rendered, including the final paragraph at settled opacity 1. Live
+  evidence: private coordinator `daily-2026-11-17/816-medspa/live-desktop.jpg`.
+  Viewport overrides reset. No physical-device or whole-site compliance claim.
+- Status: complete, deployed and live-verified. No Calendar or external stakeholder
+  messages sent by this project chat. The publication
+  above is the website change; any later documentation-only checkpoint does not
+  change deployed assets.
 
 ## What this is
 
