@@ -10,6 +10,7 @@ type TeamMember = {
   name: string;
   credentials: string;
   image?: string;
+  imageAlt?: string;
   bio: string[];
 };
 
@@ -25,13 +26,14 @@ const team: TeamMember[] = [
     ],
   },
   {
-    name: "Hailey Worthington",
-    credentials: "Registered Nurse, Licensed Esthetician",
-    image: "/images/team/Hailey.jpg",
+    name: "Allee Hill",
+    credentials: "Licensed Esthetician",
+    image: "/images/team/allee-hill.webp",
+    imageAlt: "Allee Hill",
     bio: [
-      "Hailey is a Registered Nurse and Licensed Esthetician who brings a unique blend of clinical expertise and genuine passion for skin health to her role. She earned her Biology degree from Pittsburg State University in 2019 before beginning her Army career, and later completed her Bachelor of Science in Nursing at the University of Saint Mary in 2022. More recently she became a Licensed Esthetician to expand her knowledge in skincare.",
-      "With experience in Burn ICU, Critical Care, and Psychiatry, Hailey carries forward strong skills in assessment, safety, and patient-centered care. She is deeply passionate about helping clients understand their skin, feel confident in their natural features, and achieve sustainable, noticeable results. Hailey believes in enhancing beauty through personalized treatments, expert guidance, and a nurturing touch—creating a safe, relaxing space where self-care meets self-love.",
-      "Outside of work, she enjoys spending time with her family, friends, and pets, as well as gardening, traveling, reading, and exploring nature. Committed to continual learning and natural, balanced results, Hailey strives to help every client look and feel their best at every stage of life.",
+      "Hi, I’m Allee! I’m a licensed esthetician with a passion for skincare and helping others feel confident and comfortable in their own skin. I especially love performing dermaplane facials and chemical peels, creating personalized treatments that support each client’s unique skin needs and goals. I believe skincare is an investment in yourself, and I love helping clients better understand their skin through education, intentional treatments, and thoughtful care.",
+      "My goal is to create an elevated yet welcoming experience where every client feels heard, understood, and cared for. I believe true luxury is taking the time to invest in yourself, slow down, and prioritize your well-being. I strive to make skincare feel less overwhelming and more intentional by helping clients build confidence in their skin and create lasting, healthy habits. Above all, I want every client to leave feeling refreshed, confident, and reminded to Love Yours.",
+      "Outside of the treatment room, you can find me spending time with family and friends, traveling, baking, or going on walks. I also love taking a little time for myself to relax and recharge. I’m so excited to get to know each of you, be a part of your skincare journey, and help you feel your very best along the way!",
     ],
   },
   {
@@ -114,7 +116,7 @@ const monogram = (name: string) =>
                 {member.image ? (
                   <img
                     src={member.image}
-                    alt={`${member.name}, ${member.credentials}`}
+                    alt={member.imageAlt ?? `${member.name}, ${member.credentials}`}
                     width="600"
                     height="750"
                     class="h-full w-full object-cover"
